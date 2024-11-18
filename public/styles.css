@@ -313,4 +313,96 @@ body {
         left: 10px;
     }
 }
+
+/* Add these new styles */
+.welcome-message {
+    color: var(--portal-green);
+    margin-bottom: 20px;
+}
+
+.ascii-art {
+    color: var(--portal-blue);
+    font-size: 0.7em;
+    margin-bottom: 10px;
+    text-shadow: 0 0 5px var(--portal-blue);
+}
+
+.typing-effect {
+    overflow: hidden;
+    border-right: 2px solid var(--portal-green);
+    white-space: nowrap;
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+.command-hint {
+    color: var(--portal-blue);
+    text-shadow: 0 0 3px var(--portal-blue);
+    cursor: pointer;
+}
+
+.command-item {
+    padding: 5px;
+    transition: all 0.3s ease;
+}
+
+.command-item:hover {
+    background: rgba(151, 206, 76, 0.1);
+    transform: translateX(10px);
+}
+
+.command-name {
+    color: var(--portal-blue);
+    font-weight: bold;
+}
+
+.command-desc {
+    color: var(--portal-green);
+}
+
+.error-message {
+    color: #ff5f56;
+    margin: 5px 0;
+    text-shadow: 0 0 3px #ff5f56;
+}
+
+.identity-card {
+    border: 1px solid var(--portal-green);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    background: rgba(151, 206, 76, 0.1);
+}
+
+.card-header {
+    color: var(--portal-blue);
+    border-bottom: 1px solid var(--portal-blue);
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.warning {
+    color: #ff5f56;
+    margin-top: 5px;
+}
+
+.command-line {
+    margin: 5px 0;
+    display: flex;
+    gap: 10px;
+}
+
+.typed-command {
+    color: var(--portal-green);
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--portal-green) }
+}
   
