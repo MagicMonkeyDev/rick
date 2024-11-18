@@ -1,9 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const loadingSequence = document.getElementById('loading-sequence');
     const terminal = document.querySelector('.terminal');
     const input = document.getElementById('terminal-input');
     const output = document.getElementById('output');
     let commandHistory = [];
     let historyIndex = -1;
+
+    // Show terminal after loading sequence
+    setTimeout(() => {
+        loadingSequence.classList.add('hidden');
+        terminal.style.display = 'flex';
+        // Add fade-in effect for terminal
+        terminal.style.opacity = 0;
+        terminal.style.animation = 'fadeIn 1s ease forwards';
+    }, 4000); // Adjust timing as needed
 
     // Add click event to terminal container
     terminal.addEventListener('click', (e) => {
