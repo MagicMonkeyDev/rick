@@ -486,4 +486,14 @@ body {
         height: 60vh;
     }
 }
+
+.logo-container {
+    padding: 20px;
+    text-align: center;
+}
+
+.logo {
+    max-width: 200px;
+    height: auto;
+}
   
