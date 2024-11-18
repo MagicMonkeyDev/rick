@@ -2,8 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const introContainer = document.querySelector('.intro-container');
     const websiteContent = document.querySelector('.website-content');
     
-    // Hide website content initially
-    websiteContent.style.visibility = 'hidden';
+    // Hide website content initially but keep it in normal flow
     websiteContent.style.opacity = '0';
   
     // After intro animation
@@ -12,7 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
       introContainer.style.opacity = '0';
       
       // Show website content
-      websiteContent.style.visibility = 'visible';
       websiteContent.style.opacity = '1';
       
       // Remove intro container after fade

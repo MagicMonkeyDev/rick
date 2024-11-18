@@ -21,6 +21,7 @@ body {
     overflow: hidden;
     position: relative;
     min-height: 100vh;
+    background-color: black;
 }
 
 .background-overlay {
@@ -580,62 +581,49 @@ body {
 }
 
 .intro-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background: #000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
-  transition: opacity 0.5s ease;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease;
 }
 
 .intro-gif {
-  width: 300px;
-  opacity: 0;
-  transform: scale(0.5);
-  animation: fadeInAndZoom 3s ease-in-out forwards;
+    width: 300px;
+    opacity: 0;
+    transform: scale(0.5);
+    animation: fadeInAndZoom 3s ease-in-out forwards;
 }
 
 @keyframes fadeInAndZoom {
-  0% {
-    opacity: 0;
-    transform: scale(0.5);
-  }
-  20% {
-    opacity: 1;
-    transform: scale(0.5);
-  }
-  80% {
-    opacity: 1;
-    transform: scale(1.2);
-  }
-  100% {
-    opacity: 0;
-    transform: scale(2);
-  }
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    20% {
+        opacity: 1;
+        transform: scale(0.5);
+    }
+    80% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(2);
+    }
 }
 
-/* Add these styles */
 .website-content {
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.5s ease;
-  width: 100%;
-  height: 100vh;
-  /* Add these to ensure content fills the screen */
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-/* Make sure other elements are visible within website-content */
-.website-content .terminal,
-.website-content .stats-container,
-.website-content .social-icons {
-  visibility: visible;
-  opacity: 1;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    opacity: 0;
+    transition: opacity 0.5s ease;
 }
