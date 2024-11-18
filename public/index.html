@@ -69,20 +69,19 @@
             <div class="title">C-137 TERMINAL ACCESS</div>
         </div>
         <div class="terminal-content">
-            <div style="color: #97ce4c; margin-bottom: 20px;">
-                *** COUNCIL OF RICKS TERMINAL v3.137 ***<br>
-                *** WARNING: UNAUTHORIZED ACCESS WILL BE TRACED ***
+            <div id="output">
+                <!-- Output content will go here -->
             </div>
-            <div class="prompt">
-                <span class="user">rick@c137</span>
-                <span class="separator">:</span>
-                <span class="location">~/portal-gun</span>
-                <span class="dollar">$</span>
-            </div>
-            <div id="output"></div>
-            <div class="input-line">
-                <span class="prompt-char">></span>
-                <input type="text" id="terminal-input" autofocus placeholder="Enter command (type 'help' for options)">
+            <div class="input-area">
+                <div class="input-line">
+                    <span class="prompt">
+                        <span class="user">rick@c137</span>
+                        <span class="separator">:</span>
+                        <span class="location">~/portal-gun</span>
+                        <span class="dollar">$</span>
+                    </span>
+                    <input type="text" id="terminal-input" autofocus placeholder="Type 'help' for commands...">
+                </div>
             </div>
         </div>
     </div>
