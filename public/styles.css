@@ -8,7 +8,7 @@
 }
 
 body {
-    background: url('https://i.imgur.com/0n4Bx2c.png') center/cover fixed;
+    background: url('https://i.imgur.com/31WS6qT.jpeg') center/cover fixed;
     margin: 0;
     padding: 20px;
     font-family: 'Courier New', monospace;
@@ -17,7 +17,7 @@ body {
     justify-content: center;
     align-items: center;
     color: var(--neon-green);
-    position: relative;
+    overflow: hidden;
 }
 
 .background-overlay {
@@ -32,8 +32,11 @@ body {
 }
 
 .terminal {
-    width: 85%;
-    max-width: 900px;
+    width: 90%;
+    max-width: 1200px;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
     background-color: rgba(18, 18, 24, 0.85);
     border-radius: 15px;
     box-shadow: 0 0 30px var(--portal-green),
@@ -64,12 +67,11 @@ body {
 }
 
 .terminal-content {
+    flex: 1;
     padding: 25px;
     color: var(--portal-green);
-    height: 400px;
     display: flex;
     flex-direction: column;
-    position: relative;
     background: repeating-linear-gradient(
         0deg,
         rgba(0, 0, 0, 0.2) 0px,
@@ -77,6 +79,7 @@ body {
         transparent 1px,
         transparent 2px
     );
+    overflow: hidden;
 }
 
 #output {
@@ -84,6 +87,22 @@ body {
     overflow-y: auto;
     margin-bottom: 10px;
     padding-bottom: 10px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--portal-green) transparent;
+}
+
+#output::-webkit-scrollbar {
+    width: 8px;
+}
+
+#output::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+#output::-webkit-scrollbar-thumb {
+    background-color: var(--portal-green);
+    border-radius: 4px;
+    border: 2px solid transparent;
 }
 
 .input-area {
@@ -92,17 +111,15 @@ body {
     left: 0;
     right: 0;
     background: rgba(18, 18, 24, 0.95);
-    padding: 10px;
+    padding: 15px 25px;
     border-top: 1px solid var(--portal-green);
     margin: 0 -25px -25px -25px;
-    padding: 15px 25px;
     backdrop-filter: blur(5px);
 }
 
 .input-line {
     display: flex;
     align-items: center;
-    gap: 10px;
 }
 
 #terminal-input {
@@ -111,9 +128,10 @@ body {
     color: var(--portal-green);
     font-family: 'Courier New', monospace;
     font-size: 16px;
-    flex: 1;
+    width: 100%;
     outline: none;
     text-shadow: 0 0 5px var(--portal-green);
+    padding: 5px;
 }
 
 .input-area:focus-within {
