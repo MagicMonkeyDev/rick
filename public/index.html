@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C-137 Terminal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="terminal">
+        <div class="terminal-header">
+            <div class="buttons">
+                <span class="circle red"></span>
+                <span class="circle yellow"></span>
+                <span class="circle green"></span>
+            </div>
+            <div class="title">C-137 Terminal</div>
+        </div>
+        <div class="terminal-content">
+            <div class="prompt">
+                <span class="user">rick@c137</span>
+                <span class="separator">:</span>
+                <span class="location">~/portal-gun</span>
+                <span class="dollar">$</span>
+            </div>
+            <div id="output"></div>
+            <div class="input-line">
+                <span class="prompt-char">></span>
+                <input type="text" id="terminal-input" autofocus>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
