@@ -32,18 +32,33 @@ body {
 }
 
 .terminal {
-    width: 90%;
-    max-width: 1200px;
-    height: 80vh;
+    width: 75%;
+    max-width: 1000px;
+    height: 70vh;
     display: flex;
     flex-direction: column;
-    background-color: rgba(18, 18, 24, 0.85);
+    background-color: var(--terminal-bg);
     border-radius: 15px;
     box-shadow: 0 0 30px var(--portal-green),
                 inset 0 0 15px rgba(151, 206, 76, 0.3);
     overflow: hidden;
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(5px);
     border: 1px solid var(--portal-green);
+    position: relative;
+    z-index: 2;
+}
+
+.terminal::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: transparent;
+    border-radius: 15px;
+    box-shadow: 0 0 40px rgba(151, 206, 76, 0.2);
+    z-index: -1;
 }
 
 .terminal-header {
@@ -455,5 +470,20 @@ body {
 @keyframes blink-caret {
     from, to { border-color: transparent }
     50% { border-color: var(--portal-green) }
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 1200px) {
+    .terminal {
+        width: 85%;
+        height: 65vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .terminal {
+        width: 90%;
+        height: 60vh;
+    }
 }
   
