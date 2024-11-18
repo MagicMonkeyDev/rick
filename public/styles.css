@@ -8,7 +8,7 @@
 }
 
 body {
-    background: url('https://i.imgur.com/0n4Bx2c.png') center/cover fixed;
+    background: url('https://i.imgur.com/31WS6qT.jpeg') center/cover fixed;
     margin: 0;
     padding: 20px;
     font-family: 'Courier New', monospace;
@@ -17,6 +17,18 @@ body {
     justify-content: center;
     align-items: center;
     color: var(--neon-green);
+    position: relative;
+}
+
+.background-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(2px);
+    z-index: -1;
 }
 
 .terminal {
