@@ -200,4 +200,117 @@ body {
         height: 20px;
     }
 }
+
+/* Add these new styles */
+.stats-container {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 280px;
+    background: rgba(18, 18, 24, 0.85);
+    border: 1px solid var(--portal-green);
+    border-radius: 8px;
+    padding: 15px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 0 15px rgba(151, 206, 76, 0.3);
+    z-index: 1000;
+}
+
+.stats-header {
+    border-bottom: 1px solid var(--portal-green);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.stats-title {
+    color: var(--portal-green);
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-shadow: 0 0 5px var(--portal-green);
+}
+
+.scan-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--portal-blue);
+    opacity: 0.5;
+    animation: scan 2s linear infinite;
+}
+
+.stat-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    padding: 5px;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.stat-item:hover {
+    background: rgba(151, 206, 76, 0.1);
+}
+
+.stat-label {
+    color: var(--portal-blue);
+    font-size: 0.9em;
+    text-shadow: 0 0 3px var(--portal-blue);
+}
+
+.stat-value {
+    color: var(--portal-green);
+    text-shadow: 0 0 3px var(--portal-green);
+}
+
+.danger {
+    color: #ff5f56;
+    text-shadow: 0 0 3px #ff5f56;
+    animation: pulse 2s infinite;
+}
+
+.blink-value {
+    animation: blink 1s infinite;
+}
+
+@keyframes scan {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(100px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.3; }
+    100% { opacity: 1; }
+}
+
+/* Add hover effect */
+.stats-container:hover {
+    box-shadow: 0 0 20px rgba(151, 206, 76, 0.5);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .stats-container {
+        width: 220px;
+        font-size: 0.9em;
+        top: 10px;
+        left: 10px;
+    }
+}
   
