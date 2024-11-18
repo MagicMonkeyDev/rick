@@ -38,6 +38,7 @@ body {
     width: 75%;
     max-width: 1000px;
     height: 70vh;
+    margin-top: 80px;
     display: flex;
     flex-direction: column;
     background-color: var(--terminal-bg);
@@ -49,7 +50,6 @@ body {
     border: 1px solid var(--portal-green);
     position: relative;
     z-index: 2;
-    margin-top: -20px;
 }
 
 .terminal::after {
@@ -488,6 +488,7 @@ body {
     .terminal {
         width: 90%;
         height: 60vh;
+        margin-top: 60px;
     }
 }
 
