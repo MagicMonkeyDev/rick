@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const output = document.getElementById('output');
     let commandHistory = [];
     let historyIndex = -1;
+    const introContainer = document.querySelector('.intro-container');
 
     // Show terminal after loading sequence
     setTimeout(() => {
@@ -216,4 +217,12 @@ document.addEventListener('DOMContentLoaded', () => {
             output.scrollTop = output.scrollHeight;
         }
     });
+
+    // Remove intro after animation completes
+    setTimeout(() => {
+        introContainer.style.opacity = '0';
+        setTimeout(() => {
+            introContainer.remove();
+        }, 300);
+    }, 3000); // Match this with animation duration
 });
