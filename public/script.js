@@ -1,8 +1,33 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const terminal = document.querySelector('.terminal');
     const input = document.getElementById('terminal-input');
     const output = document.getElementById('output');
     let commandHistory = [];
     let historyIndex = -1;
+
+    // Add click event to terminal container
+    terminal.addEventListener('click', (e) => {
+        // Focus the input field when clicking anywhere in the terminal
+        input.focus();
+        
+        // Prevent focus loss when selecting text
+        if (window.getSelection().toString()) {
+            return;
+        }
+        
+        // Move cursor to end of input
+        const len = input.value.length;
+        input.setSelectionRange(len, len);
+    });
+
+    // Prevent focus loss when clicking output text
+    document.getElementById('output').addEventListener('mousedown', (e) => {
+        // Allow text selection but maintain input focus
+        if (!window.getSelection().toString()) {
+            e.preventDefault();
+            input.focus();
+        }
+    });
 
     // Initial welcome message
     output.innerHTML = `
