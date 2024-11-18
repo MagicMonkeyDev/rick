@@ -6,6 +6,11 @@ document.addEventListener('DOMContentLoaded', () => {
     let commandHistory = [];
     let historyIndex = -1;
     const introContainer = document.querySelector('.intro-container');
+    const websiteContent = document.querySelector('.website-content');
+
+    // Hide website content initially
+    websiteContent.style.visibility = 'hidden';
+    websiteContent.style.opacity = '0';
 
     // Show terminal after loading sequence
     setTimeout(() => {
@@ -218,11 +223,18 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Remove intro after animation completes
+    // After intro animation
     setTimeout(() => {
+        // Fade out intro
         introContainer.style.opacity = '0';
+        
+        // Show website content
+        websiteContent.style.visibility = 'visible';
+        websiteContent.style.opacity = '1';
+        
+        // Remove intro container after fade
         setTimeout(() => {
             introContainer.remove();
-        }, 300);
+        }, 500);
     }, 3000); // Match this with animation duration
 });

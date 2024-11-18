@@ -590,10 +590,11 @@ body {
   align-items: center;
   justify-content: center;
   z-index: 9999;
+  transition: opacity 0.5s ease;
 }
 
 .intro-gif {
-  width: 300px; /* Initial size */
+  width: 300px;
   opacity: 0;
   transform: scale(0.5);
   animation: fadeInAndZoom 3s ease-in-out forwards;
@@ -616,4 +617,11 @@ body {
     opacity: 0;
     transform: scale(2);
   }
+}
+
+/* Add these styles */
+.website-content {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease;
 }
