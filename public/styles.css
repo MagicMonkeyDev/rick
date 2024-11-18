@@ -8,7 +8,7 @@
 }
 
 body {
-    background: url('https://images.unsplash.com/photo-1608178398319-48f814d0750c') center/cover fixed;
+    background: url('https://i.imgur.com/31WS6qT.jpeg') center/cover fixed;
     margin: 0;
     padding: 20px;
     font-family: 'Courier New', monospace;
@@ -22,12 +22,12 @@ body {
 .terminal {
     width: 85%;
     max-width: 900px;
-    background-color: var(--terminal-bg);
+    background-color: rgba(18, 18, 24, 0.85);
     border-radius: 15px;
     box-shadow: 0 0 30px var(--portal-green),
                 inset 0 0 15px rgba(151, 206, 76, 0.3);
     overflow: hidden;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(8px);
     border: 1px solid var(--portal-green);
 }
 
