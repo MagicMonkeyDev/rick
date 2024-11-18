@@ -19,6 +19,8 @@ body {
     align-items: center;
     color: var(--neon-green);
     overflow: hidden;
+    position: relative;
+    min-height: 100vh;
 }
 
 .background-overlay {
@@ -490,14 +492,23 @@ body {
 }
 
 .logo-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
     padding: 20px;
-    text-align: center;
     z-index: 2;
 }
 
 .logo {
-    max-width: 200px;
+    max-width: 250px;
     height: auto;
     filter: drop-shadow(0 0 10px var(--portal-green));
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
   
