@@ -21,25 +21,23 @@
             </div>
         </header>
 
-        <div class="terminal" style="display: none;">
-            <div class="terminal-header">
-                <div class="buttons">
-                    <span class="circle red"></span>
-                    <span class="circle yellow"></span>
-                    <span class="circle green"></span>
-                </div>
-                <div class="title">C-137 TERMINAL ACCESS</div>
-            </div>
-            <div class="terminal-content">
-                <div id="output">
-                    <!-- Output content will go here -->
-                </div>
-                <div class="input-area">
-                    <div class="input-line">
-                        <input type="text" id="terminal-input" autofocus placeholder="Type 'help' for commands...">
-                    </div>
+        <div class="container">
+            <div class="terminal">
+                <div class="output"></div>
+                <div class="input">
+                    <span class="prompt">guest@terminal:~$</span>
+                    <input type="text" id="input" autofocus />
+                    <span class="cursor">█</span>
                 </div>
             </div>
+
+            <div class="stats-container">
+                <!-- Your stats content -->
+            </div>
+        </div>
+
+        <div class="social-icons">
+            <!-- Your social icons -->
         </div>
     </div>
     <script src="script.js"></script>

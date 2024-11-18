@@ -624,4 +624,18 @@ body {
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.5s ease;
+  width: 100%;
+  height: 100vh;
+  /* Add these to ensure content fills the screen */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Make sure other elements are visible within website-content */
+.website-content .terminal,
+.website-content .stats-container,
+.website-content .social-icons {
+  visibility: visible;
+  opacity: 1;
 }
